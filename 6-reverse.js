@@ -12,3 +12,11 @@
 
 // console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+const reverseArray = (arr) => {
+    reversedArr=[];
+    arr.forEach(element => {
+        reversedArr.unshift(element);
+    });
+    return reversedArr;
+}
+console.log(reverseArray(["A", "B", "C"]));

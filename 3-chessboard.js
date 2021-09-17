@@ -21,3 +21,27 @@
  */
 
 // Your code here.
+const whiteCell = "#";
+const blackCell = " ";
+const size = 8;
+for (let i=1;i<=size;i++){
+    let row = "";
+    if (i%2!=0) {
+        for (let j=1;j<=size;j++){
+            if (j%2!=0) {
+                row+=whiteCell;
+            } else {
+                row+=blackCell;
+            }        
+        }
+    } else {
+        for (let j=1;j<=size;j++){
+            if (j%2!=0) {
+                row+=blackCell;
+            } else {
+                row+=whiteCell;
+            }        
+        }
+    }
+    console.log(row);    
+}

@@ -23,3 +23,36 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+const range = (num1, num2) => {
+    let arr = [];
+    for (let i = num1; i <= num2; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+const modifiedRange = (num1, num2, step = 1) => {
+    let arr = [];
+    let counter = num1;
+    if (num1 <= num2) {
+        while (counter <= num2) {
+            arr.push(counter);
+            counter += step;
+        }
+    } else {
+        while (counter>=num2) {
+            arr.push(counter);
+            counter+=step;
+        }
+    }
+    return arr;
+}
+const sum = (arr) => {
+    let sum = 0;
+    arr.forEach(element => {
+        sum += element;
+    });
+    return sum;
+}
+console.log(range(1, 7));
+console.log(sum(range(1, 10)));
+console.log(modifiedRange(1, 7,3));
